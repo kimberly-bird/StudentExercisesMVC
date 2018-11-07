@@ -70,10 +70,12 @@ namespace StudentExerciseMVC.Controllers
             }
         }
 
+
         // GET: Students/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new StudentCreateViewModel(_config);
+            return View(model);
         }
 
         // POST: Students/Create
